@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16352bbb-4b51-4a94-91ff-c32b2e8148d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/data_cleaning.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webscraping/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webscraping/scraper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/raw_data/scraped_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/raw_data/scraped_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webscraping/scraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/webscraping/scraper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webscraping/webscraper.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/webscraping/webscraper.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webscraping/scraper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="520">
+              <caret line="83" column="17" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
               <folding>
                 <element signature="e#2#17#0" expanded="true" />
               </folding>
@@ -27,7 +26,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/data_cleaning.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -47,8 +46,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/webscraping/scraper.py" />
         <option value="$PROJECT_DIR$/data/data_cleaning.py" />
+        <option value="$PROJECT_DIR$/webscraping/scraper.py" />
       </list>
     </option>
   </component>
@@ -90,10 +89,6 @@
               <item name="nhl_salary-predictions" type="462c0819:PsiDirectoryNode" />
               <item name="webscraping" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="nhl_salary-predictions" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -101,6 +96,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -131,13 +127,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24954791" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32959184" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -152,18 +149,18 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/data/data_cleaning.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/webscraping/scraper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="520">
+          <caret line="83" column="17" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
           <folding>
             <element signature="e#2#17#0" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/data_cleaning.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

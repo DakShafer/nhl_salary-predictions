@@ -1,12 +1,18 @@
 
 
 import requests
+
 from bs4 import BeautifulSoup
+
 from pandas import (
     DataFrame,
     read_html,
     concat
 )
+
+from pandas.io.json import json_normalize
+
+import ujson as json
 
 
 def get_from_capfriendly():
@@ -21,7 +27,7 @@ def get_from_capfriendly():
            base-salary,arbitration-eligible,type,signing-age,\
            signing-date,arbitration'
 
-    response = requests.get(URL)
+    response = requests.get(url)
 
     soup = BeautifulSoup(response.text)
 
@@ -35,6 +41,47 @@ def get_from_capfriendly():
         df = concat([df, df1], sort=False, ignore_index=True)
 
     df.to_csv('../data/raw_data/scraped_data.csv', index=False)
+
+
+def roster_by_team_for_year(rosters):
+    number_of_teams = len(rosters['teams'])
+
+    output = DataFrame()
+
+    for team in range(number_of_teams):
+        data = rosters['teams'][team]
+
+        roster = data['roster']['roster']
+
+        roster = json_normalize(roster, sep='_')
+
+        roster['team'] = data['abbreviation']
+        roster['teamFullName'] = data['name']
+
+        output = concat([output, roster], sort=False, ignore_index=True)
+
+    return output
+
+
+def get_players():
+    output = DataFrame()
+    for year in range(1990, 2019):
+        try:
+            year_string = str(year)+str(year+1)
+            print(f'scraping --> {year_string}', end='\r')
+            url = f'https://statsapi.web.nhl.com/api/v1/teams?expand=team.roster&season={year_string}'
+            resp = requests.get(url=url)
+            rosters = json.loads(resp.text)
+
+            all_players = roster_by_team_for_year(rosters)
+
+            all_players['year'] = year_string
+
+            output = concat([output, all_players], sort=False, ignore_index=True)
+        except KeyError:
+            print(f'SKIPPING LOCKOUT SEASON --> {year_string}')
+
+    return output
 
 
 
