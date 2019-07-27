@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16352bbb-4b51-4a94-91ff-c32b2e8148d5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/data/raw_data/scraped_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/raw_data/scraped_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/EDA-and-data-cleaning.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/data/EDA-and-data-cleaning.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webscraping/scraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/webscraping/scraper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webscraping/webscraper.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/webscraping/webscraper.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webscraping/scraper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="83" column="17" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
+            <state relative-caret-position="450">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="e#2#17#0" expanded="true" />
               </folding>
@@ -154,8 +153,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webscraping/scraper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="83" column="17" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
+        <state relative-caret-position="450">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="e#2#17#0" expanded="true" />
           </folding>

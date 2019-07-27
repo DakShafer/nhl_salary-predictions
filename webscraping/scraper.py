@@ -38,9 +38,12 @@ def get_from_capfriendly():
     df = DataFrame()
     for page in range(1, max_page):
         df1 = read_html(url + f'&p={page}')[0]
-        df = concat([df, df1], sort=False, ignore_index=True)
+        df = concat([df, df1],
+                    sort=False,
+                    ignore_index=True)
 
-    df.to_csv('../data/raw_data/scraped_data.csv', index=False)
+    df.to_csv('../data/raw_data/scraped_data.csv',
+              index=False)
 
 
 def roster_by_team_for_year(rosters):
@@ -58,7 +61,9 @@ def roster_by_team_for_year(rosters):
         roster['team'] = data['abbreviation']
         roster['teamFullName'] = data['name']
 
-        output = concat([output, roster], sort=False, ignore_index=True)
+        output = concat([output, roster],
+                        sort=False,
+                        ignore_index=True)
 
     return output
 
@@ -66,9 +71,9 @@ def roster_by_team_for_year(rosters):
 def get_players():
     output = DataFrame()
     for year in range(1990, 2019):
+        year_string = str(year) + str(year + 1)
+        print(f'scraping --> {year_string}', end='\r')
         try:
-            year_string = str(year)+str(year+1)
-            print(f'scraping --> {year_string}', end='\r')
             url = f'https://statsapi.web.nhl.com/api/v1/teams?expand=team.roster&season={year_string}'
             resp = requests.get(url=url)
             rosters = json.loads(resp.text)
@@ -77,7 +82,9 @@ def get_players():
 
             all_players['year'] = year_string
 
-            output = concat([output, all_players], sort=False, ignore_index=True)
+            output = concat([output, all_players],
+                            sort=False,
+                            ignore_index=True)
         except KeyError:
             print(f'SKIPPING LOCKOUT SEASON --> {year_string}')
 
